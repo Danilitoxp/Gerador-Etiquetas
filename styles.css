@@ -23,6 +23,15 @@ body {
     width: 100%;
 }
 
+.folha {
+    background: #fff;
+    margin: 40px;
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
+    max-width: 424px;
+    width: 100%;
+}
+
 form {
     margin-bottom: 20px;
 }
@@ -88,6 +97,18 @@ button:hover {
     align-items: flex-start; /* Alinhar itens ao topo */
 }
 
+
+#baixarEtiqueta {
+    background-color: #32ac38; /* Cor do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
 .etiqueta-preview img {
     width: 2.5cm; /* 3 cm */
     height: 2.5cm; /* 3 cm */
@@ -100,15 +121,46 @@ button:hover {
     z-index: 1;
 }
 
-/* Mantenha seus estilos existentes */
+.etiquetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 1px; /* Espaçamento entre as etiquetas */
+    height: 550px;
+    width: 100%;
+    overflow-y: auto; /* Adicionado para rolagem vertical, se necessário */
+}
 
-#logoFornecedor {
-    position: absolute; /* Posição absoluta em relação ao .etiqueta-preview */
-    top: 5px; /* Ajuste a distância vertical conforme necessário */
-    left: 5px; /* Ajuste a distância horizontal conforme necessário */
-    width: 80px;
-    height: 20px;
-    max-width: 100%; /* Ajuste o tamanho máximo da logo do fornecedor conforme necessário */
-    z-index: 2; /* Garante que a logo fique acima da imagem do produto */
-    border: none;
+#baixarEtiqueta {
+    background-color: #32ac38; /* Cor do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    position: relative;
+    left: 130px;
+    top: -16px;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+.etiqueta1, .etiqueta2, .etiqueta3, .etiqueta4, .etiqueta5, .etiqueta6, .etiqueta7, .etiqueta8, .etiqueta9, .etiqueta10 {
+    width: 180px;
+    height: 90px;
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .etiquetas {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        height: auto; /* Altura automática para ajustar o conteúdo */
+    }
+
+    .etiqueta {
+        width: calc(100% - 10px); /* Largura total da coluna com espaço de margem */
+    }
 }
