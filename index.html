@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerador de Etiquetas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Gerador de Etiquetas</h1>
-        <form id="etiquetaForm">
-            <label for="descricao">Descrição do Produto:</label>
-            <input type="text" id="descricao" name="descricao"><br><br>
-            <label for="foto">Foto do Produto:</label>
-            <input type="file" id="foto" name="foto" accept="image/*"><br><br>
-        </form>
+      <h1>Gerador de Etiquetas</h1>
+      <form id="etiquetaForm">
+        <label for="descricao">Descrição do Produto:</label>
+        <input type="text" id="descricao" name="descricao" /><br /><br />
+        <div class="separacao">
+          <div class="foto">
+            <label for="foto">Escolher Foto</label>
+            <input type="file" id="foto" name="foto" accept="image/*" />
+          </div>
 
-        <h2>Preview da Etiqueta</h2>
-        <div class="etiqueta-preview" id="etiquetaPreview">
-
-            <p id="descricaoPreview">Descrição do Produto</p>
-            <div class="etiqueta-content">
-                <img id="fotoPreview" src="" alt="Foto do Produto">
-                <div class="empty-space"></div>
-            </div>
+          <div class="fornecedor">
+            <label for="fornecedor">Escolha o Fornecedor</label>
+            <select id="fornecedor">
+              <option value="">Nenhum</option>
+              <option value="Amanco">Amanco</option>
+              <option value="Fortlev">Fortlev</option>
+              <option value="Tramontina">Tramontina</option>
+              <option value="Topfusion">Topfusion</option>
+            </select>
+          </div>
         </div>
+      </form>
 
-        <button id="AdicionarEtiqueta">Adicionar Etiqueta</button>
+      <h2>Preview da Etiqueta</h2>
+      <div class="etiqueta-preview" id="etiquetaPreview">
+        <p id="descricaoPreview">Descrição do Produto</p>
+        <div class="etiqueta-content">
+          <img id="fotoPreview" src="" alt="Foto do Produto" />
+          <img id="fornecedorPreview" src="" alt="Logo do Fornecedor" style="display: none;" />
+        </div>
+      </div>
+
+      <button id="AdicionarEtiqueta">Adicionar Etiqueta</button>
     </div>
 
-    
+
     <div class="folha">
+      <div class="etiquetas">
+        <div class="etiqueta1"></div>
+        <div class="etiqueta2"></div>
+        <div class="etiqueta3"></div>
+        <div class="etiqueta4"></div>
+        <div class="etiqueta5"></div>
+        <div class="etiqueta6"></div>
+        <div class="etiqueta7"></div>
+        <div class="etiqueta8"></div>
+        <div class="etiqueta9"></div>
+        <div class="etiqueta10"></div>
+      </div>
 
-        <div class="etiquetas">
-            <div class="etiqueta1"></div>
-            <div class="etiqueta2"></div>
-            <div class="etiqueta3"></div>
-            <div class="etiqueta4"></div>
-            <div class="etiqueta5"></div>
-            <div class="etiqueta6"></div>
-            <div class="etiqueta7"></div>
-            <div class="etiqueta8"></div>
-            <div class="etiqueta9"></div>
-            <div class="etiqueta10"></div>
-        </div>
-
-        <button id="baixarEtiqueta">Baixar Etiquetas</button>
-
+      <button id="baixarEtiqueta">Baixar Etiquetas</button>
     </div>
-    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

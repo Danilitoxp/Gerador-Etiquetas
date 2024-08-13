@@ -13,6 +13,111 @@ body {
     padding: 0;
 }
 
+.separacao {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espaçamento entre os elementos */
+    margin-bottom: 20px; /* Espaço abaixo dos botões */
+}
+
+.foto input[type="file"],
+.fornecedor select {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.foto input[type="file"] {
+    background-color: #28a745;
+    width: 150px;
+    display: none;
+    height: 25px;
+}
+
+.foto input[type="file"]::file-selector-button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#fornecedorPreview {
+    width: 75px;
+    height: 15px;
+    padding: 0;
+    position: absolute;
+    left: 19px;
+    top: -7px;
+    border: none;
+    background-color: white;
+}
+
+
+
+.foto input[type="file"]:hover,
+.fornecedor select:hover {
+    background-color: #0056b3;
+}
+
+.fornecedor select {
+    background-color: #dc3545;
+    width: 180px;
+    height: 45px;
+}
+
+.fornecedor select:hover {
+    background-color: #c82333;
+}
+
+
+.foto input[type="file"],
+.fornecedor select {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.foto input[type="file"] {
+    background-color: #28a745;
+}
+
+.foto input[type="file"]::file-selector-button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.foto input[type="file"]:hover,
+.fornecedor select:hover {
+    background-color: #0056b3;
+}
+
+.fornecedor select {
+    background-color: #dc3545;
+}
+
+.fornecedor select:hover {
+    background-color: #c82333;
+}
+
+
 .container {
     text-align: center;
     background: #fff;
@@ -49,6 +154,21 @@ input[type="file"] {
     margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.custom-file-upload {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Garante que o label se comporte como um botão */
+}
+
+.custom-file-upload:hover {
+    background-color: #218838;
 }
 
 button {
