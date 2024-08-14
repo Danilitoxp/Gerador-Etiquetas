@@ -150,6 +150,12 @@ fornecedorSelect.addEventListener('change', function() {
             case 'Topfusion':
             logoSrc = './Topfusion.png'; // Caminho da imagem para o fornecedor Fortlev
             break;
+            case 'Siemens':
+            logoSrc = './Siemens.png'; // Caminho da imagem para o fornecedor Fortlev
+            break;
+            case 'Steck':
+            logoSrc = './Steck.png'; // Caminho da imagem para o fornecedor Fortlev
+            break;
         default:
             logoSrc = '';
     }
